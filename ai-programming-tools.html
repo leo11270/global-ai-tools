@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI编程工具大全</title>
+    <style>
+        :root { --bg: #f5f7fb; --card: #fff; --text: #1f2937; --muted: #6b7280; --line: #e5e7eb; --accent: #0b63f6; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background: var(--bg); color: var(--text); }
+        h1 { color: var(--text); margin-bottom: 8px; }
+        .summary { color: var(--muted); margin-bottom: 16px; }
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 12px; }
+        .tool-card { background: var(--card); padding: 16px; border-radius: 10px; border: 1px solid var(--line); box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+        .tool-card h3 { margin: 0 0 8px 0; }
+        .tool-card a { color: var(--accent); text-decoration: none; }
+        .tool-card a:hover { text-decoration: underline; }
+        .tool-card .desc { color: var(--muted); font-size: 14px; min-height: 40px; }
+        .tag { background: #e8efff; color: #194bb8; padding: 2px 8px; border-radius: 999px; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <h1>🤖 AI编程工具大全</h1>
+    <p class="summary">收录 <span id="toolCount">100</span> 个AI编程工具</p>
+    <div class="tools-grid" id="toolsGrid">
+
+    <div class="tool-card">
+        <h3><a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">GitHub Copilot</a></h3>
+        <p class="desc">GitHub官方AI编程助手，代码补全、生成单元测试、安全漏洞扫描，支持所有主流IDE</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://cursor.sh" target="_blank" rel="noopener noreferrer">Cursor</a></h3>
+        <p class="desc">AI编程编辑器，基于VS Code深度定制，集成GPT-4o，支持智能补全、代码解释、项目级重构</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://tongyi.aliyun.com/lingma" target="_blank" rel="noopener noreferrer">通义灵码</a></h3>
+        <p class="desc">阿里云AI编程助手</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://codeium.com" target="_blank" rel="noopener noreferrer">Codeium</a></h3>
+        <p class="desc">免费AI代码补全工具</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://tabnine.com" target="_blank" rel="noopener noreferrer">Tabnine</a></h3>
+        <p class="desc">代码补全AI，支持所有语言，本地运行保护隐私</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://replit.com" target="_blank" rel="noopener noreferrer">Replit</a></h3>
+        <p class="desc">在线编程AI辅助</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://huggingface.co" target="_blank" rel="noopener noreferrer">Hugging Face</a></h3>
+        <p class="desc">AI模型社区，100K+预训练模型，Transformers库开箱即用</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://replicate.com" target="_blank" rel="noopener noreferrer">Replicate</a></h3>
+        <p class="desc">开源模型云端运行，一键部署，按量付费</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://js.langchain.com" target="_blank" rel="noopener noreferrer">LangChain</a></h3>
+        <p class="desc">AI应用开发框架，构建RAG、Agent、聊天机器人必备，全球开发者首选</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://github.com/Significant-Gravitas/AutoGPT" target="_blank" rel="noopener noreferrer">AutoGPT</a></h3>
+        <p class="desc">自主AI代理，自动分解任务、执行、多步推理</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://agentgpt.reworkd.ai" target="_blank" rel="noopener noreferrer">AgentGPT</a></h3>
+        <p class="desc">浏览器AI代理，配置后自动完成复杂任务</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://github.com/yoheinakajima/babyagi" target="_blank" rel="noopener noreferrer">BabyAGI</a></h3>
+        <p class="desc">轻量AI代理框架，任务管理和执行</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://openai.com" target="_blank" rel="noopener noreferrer">OpenAI</a></h3>
+        <p class="desc">OpenAI官方平台</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://www.anthropic.com" target="_blank" rel="noopener noreferrer">Anthropic</a></h3>
+        <p class="desc">Claude官方</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://mistral.ai" target="_blank" rel="noopener noreferrer">Mistral AI</a></h3>
+        <p class="desc">欧洲AI代表，开源Mixtral模型，稀疏MoE架构，推理效率高</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://cohere.com" target="_blank" rel="noopener noreferrer">Cohere</a></h3>
+        <p class="desc">企业AI平台</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://www.ai21.com" target="_blank" rel="noopener noreferrer">AI21 Labs</a></h3>
+        <p class="desc">AI21语言模型</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://aws.amazon.com/codewhisperer" target="_blank" rel="noopener noreferrer">Amazon CodeWhisperer</a></h3>
+        <p class="desc">AWS免费编程助手</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://sourcegraph.com/cody" target="_blank" rel="noopener noreferrer">Sourcegraph Cody</a></h3>
+        <p class="desc">代码库AI助手</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://askcodi.com" target="_blank" rel="noopener noreferrer">AskCodi</a></h3>
+        <p class="desc">AI编程助手</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://codegeex.cn" target="_blank" rel="noopener noreferrer">CodeGeex</a></h3>
+        <p class="desc">国产编程AI，中文编程辅助，免费使用</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://codecg.iflytek.com" target="_blank" rel="noopener noreferrer">iFlytek Code</a></h3>
+        <p class="desc">讯飞AI编程</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://www.datarobot.com" target="_blank" rel="noopener noreferrer">DataRobot</a></h3>
+        <p class="desc">AI机器学习</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://www.h2o.ai" target="_blank" rel="noopener noreferrer">H2O AI</a></h3>
+        <p class="desc">开源机器学习</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://platform.openai.com" target="_blank" rel="noopener noreferrer">OpenAI API</a></h3>
+        <p class="desc">GPT模型API，按量付费，全球AI应用基础</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://www.anthropic.com" target="_blank" rel="noopener noreferrer">Anthropic API</a></h3>
+        <p class="desc">Claude模型API，长文本处理，企业首选</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://ai.google" target="_blank" rel="noopener noreferrer">Google AI</a></h3>
+        <p class="desc">Google AI平台</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://azure.microsoft.com" target="_blank" rel="noopener noreferrer">Azure AI</a></h3>
+        <p class="desc">微软云AI，OpenAI服务，企业级AI解决方案</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://aws.amazon.com/ai" target="_blank" rel="noopener noreferrer">AWS AI</a></h3>
+        <p class="desc">亚马逊云AI服务，Bedrock托管模型，SageMaker机器学习</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://cohere.com" target="_blank" rel="noopener noreferrer">Cohere API</a></h3>
+        <p class="desc">Cohere企业AI</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://www.ai21.com" target="_blank" rel="noopener noreferrer">AI21 API</a></h3>
+        <p class="desc">AI21语言模型</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://mistral.ai" target="_blank" rel="noopener noreferrer">Mistral API</a></h3>
+        <p class="desc">Mistral AI</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://agentgpt.reworkd.ai" target="_blank" rel="noopener noreferrer">AgentGPT</a></h3>
+        <p class="desc">浏览器AI代理，配置后自动完成复杂任务</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://github.com/yoheinakajima/babyagi" target="_blank" rel="noopener noreferrer">BabyAGI</a></h3>
+        <p class="desc">轻量AI代理框架，任务管理和执行</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://js.langchain.com" target="_blank" rel="noopener noreferrer">LangChain</a></h3>
+        <p class="desc">AI应用开发框架，构建RAG、Agent、聊天机器人必备，全球开发者首选</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://www.crewai.com" target="_blank" rel="noopener noreferrer">CrewAI</a></h3>
+        <p class="desc">多代理框架，协作完成复杂任务，企业级</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://microsoft.github.io/autogen" target="_blank" rel="noopener noreferrer">AutoGen</a></h3>
+        <p class="desc">微软多代理框架，多个AI协作解决问题</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">GitHub Copilot</a></h3>
+        <p class="desc">GitHub官方AI编程助手，代码补全、生成单元测试、安全漏洞扫描，支持所有主流IDE</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://aws.amazon.com/codewhisperer" target="_blank" rel="noopener noreferrer">CodeWhisperer</a></h3>
+        <p class="desc">AWS代码助手</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://tabnine.com" target="_blank" rel="noopener noreferrer">Tabnine</a></h3>
+        <p class="desc">代码补全AI，支持所有语言，本地运行保护隐私</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://kite.com" target="_blank" rel="noopener noreferrer">Kite</a></h3>
+        <p class="desc">AI代码助手</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://codestream.com" target="_blank" rel="noopener noreferrer">Codestream</a></h3>
+        <p class="desc">AI代码审查</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://bubble.io" target="_blank" rel="noopener noreferrer">Bubble</a></h3>
+        <p class="desc">无代码开发</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://adalo.com" target="_blank" rel="noopener noreferrer">Adalo</a></h3>
+        <p class="desc">无代码APP</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://glideapps.com" target="_blank" rel="noopener noreferrer">Glide</a></h3>
+        <p class="desc">无代码表格</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://softr.io" target="_blank" rel="noopener noreferrer">Softr</a></h3>
+        <p class="desc">无代码网站</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://buildship.com" target="_blank" rel="noopener noreferrer">BuildShip</a></h3>
+        <p class="desc">AI工作流</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://rapidapi.com" target="_blank" rel="noopener noreferrer">RapidAPI</a></h3>
+        <p class="desc">API市场</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://postman.com" target="_blank" rel="noopener noreferrer">Postman</a></h3>
+        <p class="desc">API测试</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://ngrok.com" target="_blank" rel="noopener noreferrer">Ngrok</a></h3>
+        <p class="desc">API穿透</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://jsonhero.io" target="_blank" rel="noopener noreferrer">JsonHero</a></h3>
+        <p class="desc">JSON查看</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://hoppscotch.io" target="_blank" rel="noopener noreferrer">Hoppscotch</a></h3>
+        <p class="desc">API调试</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://pipedream.com" target="_blank" rel="noopener noreferrer">Pipedream</a></h3>
+        <p class="desc">开发者自动化</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel</a></h3>
+        <p class="desc">前端部署</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://netlify.com" target="_blank" rel="noopener noreferrer">Netlify</a></h3>
+        <p class="desc">静态部署</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://cloudflare.com" target="_blank" rel="noopener noreferrer">Cloudflare</a></h3>
+        <p class="desc">CDN</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://supabase.com" target="_blank" rel="noopener noreferrer">Supabase</a></h3>
+        <p class="desc">数据库</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://planetscale.com" target="_blank" rel="noopener noreferrer">PlanetScale</a></h3>
+        <p class="desc">MySQL</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://mongodb.com" target="_blank" rel="noopener noreferrer">MongoDB</a></h3>
+        <p class="desc">MongoDB</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://redis.com" target="_blank" rel="noopener noreferrer">Redis</a></h3>
+        <p class="desc">内存数据库，AI缓存，向量存储</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://datadoghq.com" target="_blank" rel="noopener noreferrer">Datadog</a></h3>
+        <p class="desc">监控</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://sentry.io" target="_blank" rel="noopener noreferrer">Sentry</a></h3>
+        <p class="desc">错误追踪</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://grafana.com" target="_blank" rel="noopener noreferrer">Grafana</a></h3>
+        <p class="desc">监控</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://auth0.com" target="_blank" rel="noopener noreferrer">Auth0</a></h3>
+        <p class="desc">认证</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://cypress.io" target="_blank" rel="noopener noreferrer">Cypress</a></h3>
+        <p class="desc">测试</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://playwright.dev" target="_blank" rel="noopener noreferrer">Playwright</a></h3>
+        <p class="desc">测试</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://jestjs.io" target="_blank" rel="noopener noreferrer">Jest</a></h3>
+        <p class="desc">测试</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer">VS Code</a></h3>
+        <p class="desc">IDE</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://cursor.sh" target="_blank" rel="noopener noreferrer">Cursor</a></h3>
+        <p class="desc">AI编程编辑器，基于VS Code深度定制，集成GPT-4o，支持智能补全、代码解释、项目级重构</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://jetbrains.com/pycharm" target="_blank" rel="noopener noreferrer">PyCharm</a></h3>
+        <p class="desc">Python IDE</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://replit.com" target="_blank" rel="noopener noreferrer">Replit</a></h3>
+        <p class="desc">在线IDE</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></h3>
+        <p class="desc">GitHub</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://gitlab.com" target="_blank" rel="noopener noreferrer">GitLab</a></h3>
+        <p class="desc">GitLab</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://aws.amazon.com" target="_blank" rel="noopener noreferrer">AWS</a></h3>
+        <p class="desc">AWS</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://cloud.google.com" target="_blank" rel="noopener noreferrer">GCP</a></h3>
+        <p class="desc">Google云</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://azure.microsoft.com" target="_blank" rel="noopener noreferrer">Azure</a></h3>
+        <p class="desc">微软云</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://aliyun.com" target="_blank" rel="noopener noreferrer">Aliyun</a></h3>
+        <p class="desc">阿里云</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://cloud.tencent.com" target="_blank" rel="noopener noreferrer">Tencent Cloud</a></h3>
+        <p class="desc">腾讯云</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel</a></h3>
+        <p class="desc">部署</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://netlify.com" target="_blank" rel="noopener noreferrer">Netlify</a></h3>
+        <p class="desc">部署</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://cloudflare.com" target="_blank" rel="noopener noreferrer">Cloudflare</a></h3>
+        <p class="desc">CDN</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://supabase.com" target="_blank" rel="noopener noreferrer">Supabase</a></h3>
+        <p class="desc">数据库</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://planetscale.com" target="_blank" rel="noopener noreferrer">PlanetScale</a></h3>
+        <p class="desc">数据库</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://mongodb.com" target="_blank" rel="noopener noreferrer">MongoDB</a></h3>
+        <p class="desc">数据库</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://redis.com" target="_blank" rel="noopener noreferrer">Redis</a></h3>
+        <p class="desc">内存数据库，AI缓存，向量存储</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://datadoghq.com" target="_blank" rel="noopener noreferrer">Datadog</a></h3>
+        <p class="desc">监控</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://sentry.io" target="_blank" rel="noopener noreferrer">Sentry</a></h3>
+        <p class="desc">监控</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://grafana.com" target="_blank" rel="noopener noreferrer">Grafana</a></h3>
+        <p class="desc">监控</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://auth0.com" target="_blank" rel="noopener noreferrer">Auth0</a></h3>
+        <p class="desc">安全</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://cypress.io" target="_blank" rel="noopener noreferrer">Cypress</a></h3>
+        <p class="desc">测试</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://playwright.dev" target="_blank" rel="noopener noreferrer">Playwright</a></h3>
+        <p class="desc">测试</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://jestjs.io" target="_blank" rel="noopener noreferrer">Jest</a></h3>
+        <p class="desc">测试</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer">VS Code</a></h3>
+        <p class="desc">IDE</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://cursor.sh" target="_blank" rel="noopener noreferrer">Cursor</a></h3>
+        <p class="desc">AI编程编辑器，基于VS Code深度定制，集成GPT-4o，支持智能补全、代码解释、项目级重构</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://jetbrains.com/pycharm" target="_blank" rel="noopener noreferrer">PyCharm</a></h3>
+        <p class="desc">IDE</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://replit.com" target="_blank" rel="noopener noreferrer">Replit</a></h3>
+        <p class="desc">IDE</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></h3>
+        <p class="desc">Git</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://gitlab.com" target="_blank" rel="noopener noreferrer">GitLab</a></h3>
+        <p class="desc">Git</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://aws.amazon.com" target="_blank" rel="noopener noreferrer">AWS</a></h3>
+        <p class="desc">云</p>
+        <span class="tag">编程</span>
+    </div>
+
+    <div class="tool-card">
+        <h3><a href="https://cloud.google.com" target="_blank" rel="noopener noreferrer">GCP</a></h3>
+        <p class="desc">云</p>
+        <span class="tag">编程</span>
+    </div>
+    </div>
+    <script>
+        (function dedupeAndSortCards() {
+            const grid = document.getElementById('toolsGrid');
+            if (!grid) return;
+            const cards = Array.from(grid.querySelectorAll('.tool-card'));
+            const seen = new Set();
+            const unique = [];
+            for (const card of cards) {
+                const link = card.querySelector('a');
+                const name = link ? link.textContent.trim() : '';
+                const href = link ? link.href : '';
+                const key = `${name}::${href}`;
+                if (!seen.has(key)) {
+                    seen.add(key);
+                    unique.push(card);
+                }
+            }
+            unique.sort((a, b) => {
+                const an = (a.querySelector('a')?.textContent || '').toLowerCase();
+                const bn = (b.querySelector('a')?.textContent || '').toLowerCase();
+                return an.localeCompare(bn, 'zh-Hans-CN');
+            });
+            grid.innerHTML = '';
+            unique.forEach(card => grid.appendChild(card));
+            const countEl = document.getElementById('toolCount');
+            if (countEl) countEl.textContent = String(unique.length);
+        })();
+    </script>
+</body>
+</html>
